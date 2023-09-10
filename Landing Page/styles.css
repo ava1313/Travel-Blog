@@ -1,0 +1,106 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-container {
+  height: 500vh;
+  position: relative;
+}
+
+.parallax-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.background-layer, .midground-layer, .foreground-layer, .top-layer, .super-top-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  background-position: center;
+}
+
+.background-layer {
+  background: url('back.png') no-repeat center center;
+  z-index: 1;
+  background-size:fill;
+}
+
+.midground-layer {
+  background: url('mid.png') repeat-x center center;
+  z-index: 2;
+  background-size: fill;
+}
+
+.foreground-layer {
+  background: url('foreground.png') repeat-x center center;
+  z-index: 3;
+  top: 12%;
+  background-size: fill;
+}
+
+.top-layer {
+  background: url('top.png') repeat-x center center;
+  z-index: 4;
+  top: 21%;
+  background-size: fill;
+}
+
+.super-top-layer {
+  background: url('super-top.png') repeat-x center center;
+  z-index: 5;
+  top: 20%;
+  background-size: fill;
+}
+
+.train-window {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url('train1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.travel-blog-text {
+  position: absolute;
+  left: 50%;  /* Center horizontally */
+  top: 57%;
+  font-size: 4vw;
+  z-index: 6;
+  opacity: 1;
+  transform: translate(-10%, -50%);  /* Centering adjustment */  color: #000;
+  font-family: "Dancing Script";
+}
+
+.continue-button {
+  display: none;
+  position: fixed;
+  left: 50%;  /* Center horizontally */
+  top: 70%;
+  z-index: 10;
+  font-size: 2vw;
+  opacity: 1;
+  transform: translate(-50%, -50%);  /* Centering adjustment */
+  padding: 1vw 2vw;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.5);
+  color: #000;
+  pointer-events: auto;
+}
+#monument1 {
+  display: none;
+  position: fixed;
+  left: 20%;
+  top: 60%;
+  z-index: 4;
+}
+
+
