@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  
 </head>
 <body>
   
@@ -44,8 +46,8 @@
 
   <!-- ... -->
   <section class="new-posts py-5">
-    <h2 class="text-center">-New Posts-</h2>
-    <div class="container">
+    <h2 data-aos="flip-left" data-aos-duration="1000" data-aos-delay="50" class="text-center">-New Posts-</h2>
+    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
      
         <div class="owl-carousel owl-theme">
             <div class="item">
@@ -115,10 +117,10 @@
 
 
 <section class="new-posts py-5">
-  <h2 class="text-center">-Featured Travels-</h2>
-  <div class="container text-center">
+  <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" class="text-center" >-Featured Travels-</h2>
+  <div class="container text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
      
-      <div class="owl-carousel owl-theme">
+      <div class="owl-carousel owl-theme" >
           <div class="item">
               <div class="card">
                   <img src="image1.JPG" class="card-img-top" alt="News 1">
@@ -175,7 +177,7 @@
   </div>
 </footer>
 
-  <footer class="footer bg-dark text-white text-center py-3">
+  <footer class="footer bg-white text-black text-center py-3">
     <p>Copyright 2023, Stravel BLog</p>
   </footer>
 
@@ -185,6 +187,9 @@
   <script src="home.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+  <script>
+    AOS.init();
+  </script>
+  
 </body>
 </html>
