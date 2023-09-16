@@ -95,12 +95,5 @@ body, html {
   color: #000;
   pointer-events: auto;
 }
-#monument1 {
-  display: none;
-  position: fixed;
-  left: 20%;
-  top: 60%;
-  z-index: 4;
-}
 
 
