@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ava1313/Travel-Blog  # Your GitHub username and repo name
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 collections:
