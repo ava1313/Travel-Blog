@@ -1,6 +1,6 @@
 <?php
-$client_id =  ebce225a13092d0c93df ;
-$client_secret = 91312e6d39176cf5067d8016b5788155e0836b11;
+$client_id = 'ebce225a13092d0c93df';
+$client_secret = '91312e6d39176cf5067d8016b5788155e0836b11';
 
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
@@ -23,6 +23,11 @@ if (isset($_GET['code'])) {
     $context  = stream_context_create($opts);
     $response = file_get_contents('https://github.com/login/oauth/access_token', false, $context);
     
-    // Parse the response (you'll want to store the access token in a secure way)
+    // Parse the response
     parse_str($response, $output);
-   
+    $access_token = $output['access_token'];
+    
+    // Redirect back to your CMS admin panel
+    header('Location: /admin/#access_token=' . $access_token);
+}
+?>
