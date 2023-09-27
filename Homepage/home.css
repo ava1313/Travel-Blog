@@ -153,20 +153,11 @@ section.py-5 h2 {
 }
 
 
-.instagram-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-#instagramPosts {
-  flex: 1;
-  margin: 0 10px; /* Adjust the margin as needed */
-}
 .layered-posts {
   position: relative;
-  width: 100%;
-  height: 500px; /* Adjust as needed */
+  width: 500%;
+  height: 1000px; /* Adjust as needed */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -183,12 +174,12 @@ section.py-5 h2 {
 }
 
 .post:nth-child(1) {
-  transform: scale(0.8) rotate(10deg);
+  transform: scale(0.8) rotate(50deg);
   z-index: 1;
 }
 
 .post:nth-child(2) {
-  transform: scale(0.9) rotate(-10deg);
+  transform: scale(0.9) rotate(-20deg);
   z-index: 2;
 }
 
