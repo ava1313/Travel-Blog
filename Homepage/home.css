@@ -156,22 +156,26 @@ section.py-5 h2 {
 
 .layered-posts {
   position: relative;
-  width: 80%;
-  height: 1000px; /* Adjust as needed */
+  width: 100%; /* Full width of its parent */
+  height: 0; /* Reset height */
+  padding: 70%; /* Aspect ratio for 16:9 */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
+
 .post {
   position: absolute;
-  width: 60%; /* Adjust as needed */
+  width: 80%; /* Adjust as needed */
   height: 80%; /* Adjust as needed */
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease;
 }
+
 
 .post:nth-child(1) {
   transform: scale(0.8) rotate(20deg);
@@ -192,14 +196,20 @@ section.py-5 h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: #f5efdf;
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 2rem;
-  padding: 10px 20px;
+  width: 50px;  /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  border-radius: 50%; /* This makes it a circle */
+  display: flex; /* These three lines center the arrow icon */
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   z-index: 4;
 }
+
 
 .left-arrow {
   left: 10px;
