@@ -170,7 +170,8 @@ section.py-5 h2 {
 
 
 .post {
-  
+  margin: 2rem;
+  padding: -20px;
   position: absolute;
   bottom: 30px;
   width: 100%; /* Adjust as needed */
