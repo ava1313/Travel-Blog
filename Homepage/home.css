@@ -90,7 +90,7 @@ section.py-5 h2 {
   font-family: "Dancing Script";
   font-weight: bold;
   padding: 6rem;
-  
+  background-color:transparent;
   z-index: 5;
   
 }
@@ -255,26 +255,58 @@ section.py-5 h2 {
   right: -40%;
  
 }
-.new-posts h2, .social-media h2 {
-  position: relative; /* Make sure the parent has a relative position */
+
+
+
+.text-container {
+  position: relative;
+  text-align: center;  /* To center the h2 text */
 }
 
-.new-posts h2::after, .social-media h2::after {
-  content: '';
-  display: block;
-  width: 500px;
-  height: 90px;
-  background-image: url('brushmark.png');
-  background-repeat: no-repeat;
-  background-size: contain;
+.brushmark-image {
   position: absolute;
-  top: 100%; /* Adjust as needed */
-  right: 27%; /* Adjust as needed */
-  margin-top: 70px;
-  top: 10px;
-  z-index: -1;
+  top: 50%;  /* Adjust as needed to vertically center the image relative to the text */
+  left: 50%;  /* Center the image horizontally */
+  transform: translate(-50%, -50%);  /* Ensures the image is centered */
+  z-index: -1;  /* Places the image beneath the text */
+  width: 400px;  /* Adjust as needed */
+  height: 80px;  /* Adjust as needed */
+  opacity: 1;  /* Adjust as needed for desired transparency */
 }
-.social-media h2 {
-    color: rgba(0, 0, 0, 100); /* This sets the text color to black with full opacity */
+
+.social-media h2 , .new-posts h2{
+  z-index: 1;  /* Ensures the text stays above the image */
+  position: relative;  /* Needed for z-index to take effect */
 }
-  
+.owl-carousel span {
+  width:10px;
+  height:10px;
+  margin:5px 7px;
+  background: rgb(137, 137, 137) !important;
+  display:block;
+  -webkit-backface-visibility:visible;
+  -webkit-transition:opacity 200ms ease;
+  -moz-transition:opacity 200ms ease;
+  -ms-transition:opacity 200ms ease;
+  -o-transition:opacity 200ms ease;
+  transition:opacity 200ms ease;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+}
+.owl-carousel .active span {
+  width:10px;
+  height:10px;
+  margin:5px 7px;
+  background: rgb(255, 255, 255) !important;
+  display:block;
+  -webkit-backface-visibility:visible;
+  -webkit-transition:opacity 200ms ease;
+  -moz-transition:opacity 200ms ease;
+  -ms-transition:opacity 200ms ease;
+  -o-transition:opacity 200ms ease;
+  transition:opacity 200ms ease;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+}
