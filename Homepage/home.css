@@ -184,7 +184,7 @@ section.py-5 h2 {
   justify-content: center;
   align-items: center;
   padding: 20rem;
-  margin-top: 3rem;
+  margin-top: 50px;
   z-index: 1;
 
 }
@@ -261,6 +261,7 @@ section.py-5 h2 {
 .text-container {
   position: relative;
   text-align: center;  /* To center the h2 text */
+  margin-bottom: 50px;
 }
 
 .brushmark-image {
@@ -275,9 +276,9 @@ section.py-5 h2 {
 }
 
 .social-media h2 {
-  z-index: 1;  /* Ensures the text stays above the image */
-  position: relative;  /* Needed for z-index to take effect */
-  padding-bottom: 9rem;
+   /* Ensures the text stays above the image */
+    /* Needed for z-index to take effect */
+  margin-bottom: 100px;
 }
 .owl-carousel span {
   width:10px;
