@@ -32,3 +32,39 @@ document.querySelectorAll('.instagram-post').forEach((post, index) => {
         post.style.zIndex = index + 1; // Reset to original layer
     });
 });
+const posts = document.querySelectorAll('.instagram-post');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+leftArrow.addEventListener('click', () => {
+    const firstPost = posts[0];
+    firstPost.parentElement.appendChild(firstPost);
+    updatePosts();
+});
+
+rightArrow.addEventListener('click', () => {
+    const lastPost = posts[posts.length - 1];
+    lastPost.parentElement.insertBefore(lastPost, posts[0]);
+    updatePosts();
+});
+
+function updatePosts() {
+    posts.forEach((post, index) => {
+        switch (index) {
+            case 0:
+                post.style.transform = 'scale(0.8) rotate(10deg)';
+                post.style.zIndex = '1';
+                break;
+            case 1:
+                post.style.transform = 'scale(0.9) rotate(-10deg)';
+                post.style.zIndex = '2';
+                break;
+            case 2:
+                post.style.transform = 'scale(1)';
+                post.style.zIndex = '3';
+                break;
+        }
+    });
+}
+
+updatePosts();

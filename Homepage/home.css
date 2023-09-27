@@ -168,30 +168,52 @@ section.py-5 h2 {
   width: 100%;
   height: 500px; /* Adjust as needed */
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .post {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 60%; /* Adjust as needed */
+  height: 80%; /* Adjust as needed */
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease;
-  z-index: 1; /* This ensures all posts start at the same layer */
 }
 
 .post:nth-child(1) {
-  transform: scale(1);
+  transform: scale(0.8) rotate(10deg);
+  z-index: 1;
 }
 
 .post:nth-child(2) {
-  transform: scale(0.9) translateY(20px);
+  transform: scale(0.9) rotate(-10deg);
   z-index: 2;
 }
 
 .post:nth-child(3) {
-  transform: scale(0.8) translateY(40px);
+  transform: scale(1);
   z-index: 3;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
 }
