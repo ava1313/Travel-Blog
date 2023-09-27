@@ -274,9 +274,10 @@ section.py-5 h2 {
   opacity: 1;  /* Adjust as needed for desired transparency */
 }
 
-.social-media h2 , .new-posts h2{
+.social-media h2 , {
   z-index: 1;  /* Ensures the text stays above the image */
   position: relative;  /* Needed for z-index to take effect */
+  padding: 4rem;
 }
 .owl-carousel span {
   width:10px;
