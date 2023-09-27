@@ -124,19 +124,55 @@ section.py-5 h2 {
 }
 
 .card .btn-primary {
-  background-color: #f5efdf;  /* Updated color */
-  border-color: #f5efdf;  /* Updated color */
+  background-color: #f4dcc4;  /* Updated color */
+  border-color: #ffd3a7;  /* Updated color */
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card .btn-primary:hover {
   background-color: #e5dfcf;  /* Similar color when pressed */
   border-color: #e5dfcf;  /* Similar color when pressed */
-}
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      -webkit-box-shadow: 4px 5px 17px -4px #292929;
+      box-shadow: 4px 5px 17px -4px #000000;
 
+}
+.card .btn-primary::before{
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f4944b85;
+  -webkit-transform: skewX(45deg);
+      -ms-transform: skewX(45deg);
+          transform: skewX(45deg);
+  z-index: -1;
+  -webkit-transition: width 1000ms;
+  transition: width 1000ms;
+}
 .card .btn-primary,
 .card .btn-primary:hover {
   color: #000000; 
 }
+
+.card .btn-primary:hover::before {
+  width: 250%;
+}
+
 
 /* Footer styles */
 .footer {
