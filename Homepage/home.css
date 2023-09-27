@@ -163,3 +163,35 @@ section.py-5 h2 {
   flex: 1;
   margin: 0 10px; /* Adjust the margin as needed */
 }
+.layered-posts {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 1; /* This ensures all posts start at the same layer */
+}
+
+.post:nth-child(1) {
+  transform: scale(1);
+}
+
+.post:nth-child(2) {
+  transform: scale(0.9) translateY(20px);
+  z-index: 2;
+}
+
+.post:nth-child(3) {
+  transform: scale(0.8) translateY(40px);
+  z-index: 3;
+}
