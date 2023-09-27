@@ -31,7 +31,7 @@ function updatePosts() {
         let position = (index - currentIndex + 3) % 3; // Adjust for negative values
         switch (position) {
             case 0:
-                post.style.transform = 'scale(0.8) rotate(50deg)';
+                post.style.transform = 'scale(0.8) rotate(20deg)';
                 post.style.zIndex = '1';
                 break;
             case 1:
