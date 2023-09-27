@@ -158,21 +158,22 @@ section.py-5 h2 {
   position: relative;
   width: 100%; /* Full width of its parent */
   height: 0; /* Reset height */
-  padding: 70%; /* Aspect ratio for 16:9 */
+  padding-bottom: 70%; /* Aspect ratio for 16:9 */
   overflow: visible;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20rem;;
 }
 
 
 
 .post {
-  margin: 0;
-  padding: 0;
+  
   position: absolute;
+  bottom: 30px;
   width: 100%; /* Adjust as needed */
-  height: 80%; /* Adjust as needed */
+  height: -10px; /* Adjust as needed */
   background-size: cover;
   background-position: center;
   transition: transform 0.5s ease;
