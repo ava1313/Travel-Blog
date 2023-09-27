@@ -72,6 +72,7 @@ section.py-5 h2 {
   font-weight: bold;
   padding: 6rem;
   background-color: #ffffff;
+  z-index: 5;
   
 }
 
@@ -164,7 +165,7 @@ section.py-5 h2 {
   justify-content: center;
   align-items: center;
   padding: 20rem;
-  
+  margin-top: 3rem;
 }
 
 
