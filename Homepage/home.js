@@ -20,45 +20,22 @@ $(document).ready(function(){
     });
 });
 
-// Hover effect for Instagram posts
-document.querySelectorAll('.instagram-post').forEach((post, index) => {
-    post.addEventListener('mouseover', () => {
-        post.style.transform = 'scale(1.1)';
-        post.style.zIndex = 10; // Bring to the foreground
-    });
+// Layered Posts Logic
+const postsContainer = document.querySelector('.layered-posts');
+const posts = Array.from(postsContainer.querySelectorAll('.post'));
 
-    post.addEventListener('mouseout', () => {
-        post.style.transform = 'scale(1)';
-        post.style.zIndex = index + 1; // Reset to original layer
-    });
-});
-
-// Layered posts functionality
-const posts = document.querySelectorAll('.instagram-post');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
-leftArrow.addEventListener('click', () => {
-    const firstPost = posts[0];
-    firstPost.parentElement.appendChild(firstPost);
-    updatePosts();
-});
-
-rightArrow.addEventListener('click', () => {
-    const lastPost = posts[posts.length - 1];
-    lastPost.parentElement.insertBefore(lastPost, posts[0]);
-    updatePosts();
-});
+let currentIndex = 0;
 
 function updatePosts() {
     posts.forEach((post, index) => {
-        switch (index) {
+        let position = (index - currentIndex + 3) % 3; // Adjust for negative values
+        switch (position) {
             case 0:
-                post.style.transform = 'scale(0.8) rotate(10deg)';
+                post.style.transform = 'scale(0.8) rotate(50deg)';
                 post.style.zIndex = '1';
                 break;
             case 1:
-                post.style.transform = 'scale(0.9) rotate(-10deg)';
+                post.style.transform = 'scale(0.9) rotate(-20deg)';
                 post.style.zIndex = '2';
                 break;
             case 2:
@@ -68,5 +45,18 @@ function updatePosts() {
         }
     });
 }
+
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % 3;
+    updatePosts();
+});
+
+rightArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + 3) % 3; // Adjust for negative values
+    updatePosts();
+});
 
 updatePosts();
