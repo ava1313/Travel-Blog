@@ -159,7 +159,7 @@ section.py-5 h2 {
   width: 100%; /* Full width of its parent */
   height: 0; /* Reset height */
   padding: 70%; /* Aspect ratio for 16:9 */
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,8 +168,10 @@ section.py-5 h2 {
 
 
 .post {
+  margin: 0;
+  padding: 0;
   position: absolute;
-  width: 80%; /* Adjust as needed */
+  width: 100%; /* Adjust as needed */
   height: 80%; /* Adjust as needed */
   background-size: cover;
   background-position: center;
@@ -208,6 +210,10 @@ section.py-5 h2 {
   align-items: center;
   cursor: pointer;
   z-index: 4;
+}
+.instagram-row {
+  text-align: center; /* Ensure text alignment is centered */
+  
 }
 
 
