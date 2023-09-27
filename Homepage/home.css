@@ -90,7 +90,7 @@ section.py-5 h2 {
   font-family: "Dancing Script";
   font-weight: bold;
   padding: 6rem;
-  background-color:transparent;
+  
   z-index: 5;
   
 }
@@ -224,8 +224,8 @@ section.py-5 h2 {
   position: absolute;
   top: 20%;
   transform: translateY(-50%);
-  background-color: #f5efdf;
-  color: rgb(255, 255, 255);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   border: none;
   width: 50px;  /* Adjust as needed */
@@ -255,3 +255,26 @@ section.py-5 h2 {
   right: -40%;
  
 }
+.new-posts h2, .social-media h2 {
+  position: relative; /* Make sure the parent has a relative position */
+}
+
+.new-posts h2::after, .social-media h2::after {
+  content: '';
+  display: block;
+  width: 500px;
+  height: 90px;
+  background-image: url('brushmark.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 100%; /* Adjust as needed */
+  right: 27%; /* Adjust as needed */
+  margin-top: 70px;
+  top: 10px;
+  z-index: -1;
+}
+.social-media h2 {
+    color: rgba(0, 0, 0, 100); /* This sets the text color to black with full opacity */
+}
+  
