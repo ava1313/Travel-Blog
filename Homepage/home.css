@@ -218,9 +218,9 @@ section.py-5 h2 {
 
 
 .left-arrow {
-  left: 10px;
+  left: -50px;
 }
 
 .right-arrow {
-  right: 10px;
+  right: -50px;
 }
