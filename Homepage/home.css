@@ -277,7 +277,7 @@ section.py-5 h2 {
 .social-media h2 {
   z-index: 1;  /* Ensures the text stays above the image */
   position: relative;  /* Needed for z-index to take effect */
-  padding: 9rem;
+  padding-bottom: 9rem;
 }
 .owl-carousel span {
   width:10px;
