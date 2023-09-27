@@ -174,7 +174,7 @@ section.py-5 h2 {
 }
 
 .post:nth-child(1) {
-  transform: scale(0.8) rotate(50deg);
+  transform: scale(0.8) rotate(20deg);
   z-index: 1;
 }
 
