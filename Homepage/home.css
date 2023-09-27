@@ -197,7 +197,7 @@ section.py-5 h2 {
 
 .arrow {
   position: absolute;
-  top: 0%;
+  top: 50%;
   transform: translateY(-50%);
   background-color: #f5efdf;
   color: rgb(255, 255, 255);
