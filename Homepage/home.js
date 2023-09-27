@@ -1,26 +1,26 @@
-
-  // Initialize Owl Carousel
-//owl carousel 
+// Initialize Owl Carousel
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-      autoplay : 5000,
-      loop: true,
-      margin: 10,
-      nav: false, 
-      dots: true, 
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 3
-          },
-          1000: {
-              items: 3
-          }
-      }
-  });
+    $(".owl-carousel").owlCarousel({
+        autoplay : 5000,
+        loop: true,
+        margin: 10,
+        nav: false, 
+        dots: true, 
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
 });
+
+// Hover effect for Instagram posts
 document.querySelectorAll('.instagram-post').forEach((post, index) => {
     post.addEventListener('mouseover', () => {
         post.style.transform = 'scale(1.1)';
@@ -32,6 +32,8 @@ document.querySelectorAll('.instagram-post').forEach((post, index) => {
         post.style.zIndex = index + 1; // Reset to original layer
     });
 });
+
+// Layered posts functionality
 const posts = document.querySelectorAll('.instagram-post');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
