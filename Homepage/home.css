@@ -1,9 +1,16 @@
-/* Mimic the styling from mytravelgram.gr }*/
+/* Mimic the styling from mytravelgram.gr 
 body {
   font-family: Arial, sans-serif;
   background-color: #f5efdf;
-
+}*/
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* This makes the background image fixed while scrolling */
 }
+
 
 header{
   background-color: #333;
