@@ -163,7 +163,8 @@ section.py-5 h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20rem;;
+  padding: 20rem;
+  
 }
 
 
@@ -201,7 +202,7 @@ section.py-5 h2 {
   transform: translateY(-50%);
   background-color: #f5efdf;
   color: rgb(255, 255, 255);
-  border: none;
+   border: 1px solid #252525;
   font-size: 2rem;
   width: 50px;  /* Adjust as needed */
   height: 50px; /* Adjust as needed */
@@ -211,6 +212,10 @@ section.py-5 h2 {
   align-items: center;
   cursor: pointer;
   z-index: 4;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5),  
+  1px -1px 0 rgba(0, 0, 0, 0.5),
+  -1px 1px 0 rgba(0, 0, 0, 0.5),
+  1px 1px 0 rgba(0, 0, 0, 0.5); 
 }
 .instagram-row {
   text-align: center; /* Ensure text alignment is centered */
@@ -224,4 +229,5 @@ section.py-5 h2 {
 
 .right-arrow {
   right: -40%;
+ 
 }
