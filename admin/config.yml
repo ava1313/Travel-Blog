@@ -3,7 +3,7 @@ backend:
   repo: ava1313/Travel-Blog  # Replace with your GitHub username and repository name
   base_url: http://avagianos.ddns.net  # Replace with your Raspberry Pi's external URL
   auth_endpoint: oauth-callback.php  # Replace with your OAuth callback PHP script
-
+α
 media_folder: "img/uploads"
 public_folder: "/img/uploads"
 collections:
