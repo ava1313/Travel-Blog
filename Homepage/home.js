@@ -1,4 +1,5 @@
 // Initialize Owl Carousel
+//owl carousel 
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         autoplay : 5000,
@@ -18,8 +19,8 @@ $(document).ready(function(){
             }
         }
     });
-});
-
+  });
+  
 // Layered Posts Logic
 const postsContainer = document.querySelector('.layered-posts');
 const posts = Array.from(postsContainer.querySelectorAll('.post'));
