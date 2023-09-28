@@ -349,3 +349,49 @@ section.py-5 h2 {
   -moz-border-radius:30px;
   border-radius:30px;
 }
+
+
+
+
+.map-card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* This ensures that the map corners are also rounded */
+}
+
+#travel-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 15px; /* Rounded corners */
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+.popup-content {
+  width: 200px;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.popup-articles {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup-articles li {
+  margin-bottom: 5px;
+}

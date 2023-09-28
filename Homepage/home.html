@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
   
 
 <body>
@@ -121,46 +123,34 @@
 </section>
 
 
+<section class="travel-section py-5">
+  <div class="container">
+      <div class="row">
+          <!-- Map Column -->
+          <div class="col-lg-7" data-aos="fade-right" data-aos-duration="1000">
+              <!-- Map Card -->
+              <div class="map-card">
+                  <div id="travel-map"></div>
+                  <div class="map-overlay">
+                      <h4>My Travel Destinations</h4>
+                  </div>
+              </div>
+          </div>
 
-<section class="new-posts py-5">
-  <div class="text-container">
-  <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" class="text-center" >-Featured Travels-</h2>
-  <img src="brushmark.png" alt="Brushmark" class="brushmark-image">
-</div>
-  <div class="container text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-     
-      <div class="owl-carousel owl-theme" >
-          <div class="item">
-              <div class="card">
-                  <img src="image1.JPG" class="card-img-top" alt="News 1">
-                  <div class="card-body">
-                      <h5 class="card-title">Wildfires across the globe</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="Articles/article1.html" class="btn btn-primary">Read More</a>
-                  </div>
-              </div>
+          <!-- Text Column -->
+          <div class="col-lg-5 text-container" data-aos="fade-left" data-aos-duration="1000">
+              <img src="your_photo.jpg" alt="Your Name" class="img-fluid rounded-circle mb-3">
+              <h3>About Me</h3>
+              <p>Hello! I'm [Your Name]. I have a passion for traveling and exploring new places. Join me as I share my adventures and travel tips with you.</p>
+              <blockquote class="blockquote">
+                  <p>"Travel makes one modest. You see what a tiny place you occupy in the world." - Gustave Flaubert</p>
+              </blockquote>
           </div>
-          <div class="item">
-              <div class="card">
-                  <img src="image2.jpg" class="card-img-top" alt="News 2">
-                  <div class="card-body">
-                      <h5 class="card-title">The Effects of Reforestation</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="Articles/article2.html" class="btn btn-primary">Read More</a>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <div class="card">
-                  <img src="image3.jpg" class="card-img-top" alt="News 3">
-                  <div class="card-body">
-                      <h5 class="card-title">Protect Our Forests</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="Articles/article3.html" class="btn btn-primary">Read More</a>
-                  </div>
-              </div>
-          </div>
-        </section>
+      </div>
+  </div>
+</section>
+
+
 
         <section class="social-media py-5" >
           <div class="text-container">

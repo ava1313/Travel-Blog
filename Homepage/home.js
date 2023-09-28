@@ -61,3 +61,80 @@ rightArrow.addEventListener('click', () => {
 });
 
 updatePosts();
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Initialize the map
+    var map = L.map('travel-map', {
+        maxBounds: [[-90, -180], [90, 180]], // Set bounds to prevent panning beyond the visible world
+        maxBoundsViscosity: 1.0 // Makes the bounds fully solid, preventing the user from dragging outside the bounds
+    }).setView([20, 0], 2); // Adjust the zoom level to 2 to see the entire globe
+
+    // Add a satellite tile layer (Esri)
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    }).addTo(map);
+
+    // Add markers for places you've been
+    var places = [
+        {
+            lat: 40.730610, 
+            lng: -73.935242, 
+            title: 'New York',
+            images: ['image1.jpg', 'image2.jpg'],
+            articles: [
+                {title: 'Article 1 about NY', link: 'link_to_article1.html'},
+                {title: 'Article 2 about NY', link: 'link_to_article2.html'}
+            ]
+        },
+        {
+            lat: 48.8566, 
+            lng: 2.3522, 
+            title: 'Paris',
+            images: ['path_to_paris_image1.jpg', 'path_to_paris_image2.jpg'],
+            articles: [
+                {title: 'Article 1 about Paris', link: 'link_to_paris_article1.html'},
+                {title: 'Article 2 about Paris', link: 'link_to_paris_article2.html'}
+            ]
+        }
+        // Add more places as needed
+    ];
+    
+
+    places.forEach(function(place) {
+        L.marker([place.lat, place.lng]).addTo(map)
+        .bindPopup(place.title)
+        .openPopup();
+    });
+
+});
+places.forEach(function(place) {
+    var popupContent = '<div class="popup-content">';
+
+    // Add images
+    place.images.forEach(function(image) {
+        popupContent += '<img src="' + image + '" alt="' + place.title + '" class="popup-image">';
+    });
+
+    // Add article links
+    popupContent += '<ul class="popup-articles">';
+    place.articles.forEach(function(article) {
+        popupContent += '<li><a href="' + article.link + '">' + article.title + '</a></li>';
+    });
+    popupContent += '</ul>';
+
+    popupContent += '</div>';
+
+    // Create marker with popup
+    L.marker([place.lat, place.lng])
+    .bindPopup(popupContent, { closeButton: false }) // Disable the default close button
+    .on('mouseover', function (e) {
+        this.openPopup();
+    })
+    .on('mouseout', function (e) {
+        this.closePopup();
+    })
+    .addTo(map);
+});
