@@ -395,3 +395,8 @@ section.py-5 h2 {
 .popup-articles li {
   margin-bottom: 5px;
 }
+
+
+.text-container h3,p {
+  color: #fff;
+}
