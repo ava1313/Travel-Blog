@@ -397,6 +397,6 @@ section.py-5 h2 {
 }
 
 
-.text-container h3,p {
+.text-container h3, .text-container p {
   color: #fff;
 }
